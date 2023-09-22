@@ -1,5 +1,4 @@
 from django.db import models
-from django.conf import settings  # Import settings module
 
 
 class Invoice(models.Model):

@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from .models import Invoice, InvoiceDetail
 from django.db import transaction
 
@@ -9,7 +8,7 @@ class InvoiceDetailSerializer(serializers.ModelSerializer):
         model = InvoiceDetail
         fields = '__all__'
         extra_kwargs = {
-            'invoice': {'required': False},  # Make the invoice field not required
+            'invoice': {'required': False},  # we are making the invoice field not required
         }
 
 
@@ -34,12 +33,16 @@ class InvoiceSerializer(serializers.ModelSerializer):
 
 
 
+
+
+
+
+
     # def create(self, validated_data):
     #     print(validated_data)
     #     invoice_details_data = validated_data.pop('invoice_details',[])
     #     invoice = Invoice.objects.create(**validated_data)
     #     for invoice_detail_data in invoice_details_data:
-    #         # Remove 'invoice' from invoice_detail_data before creating InvoiceDetail
     #         invoice_detail_data.update({"invoice_id": invoice.id})
     #         print(invoice_detail_data)
     #         InvoiceDetail.objects.create(**invoice_detail_data)
