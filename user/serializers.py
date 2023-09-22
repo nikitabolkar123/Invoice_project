@@ -16,7 +16,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
              meta class is used to change the behaviour of the model fields
         """
         model = User
-        fields = ['id', 'first_name', 'last_name', 'email', 'username', 'phnno', 'password', 'city',
+        fields = ['id', 'first_name', 'last_name', 'email', 'username', 'phnno', 'password', 'location',
                   'is_superuser']
         extra_kwargs = {'password': {'write_only': True}}
 

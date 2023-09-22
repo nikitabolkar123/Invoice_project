@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'user',
     'invoices',
     'rest_framework',
-    'rest_framework_simplejwt',
+    # 'rest_framework_simplejwt',
 
 ]
 
@@ -127,7 +127,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "user.User"
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1440),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-}
+# SIMPLE_JWT = {
+#     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1440),
+#     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+# }
